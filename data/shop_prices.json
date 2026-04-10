@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "sell_rate": 0.5,
+    "daily_refresh": true,
+    "stock_limit": 6,
+    "description": "玩家卖出物品价格为买入价的50%，营地服务为固定价格"
+  },
+  "equipment_rules": {
+    "slot_base": {
+      "weapon": { "base": 30, "per_attack": 3, "per_defense": 2, "per_hp": 0.3, "per_special": 15 },
+      "armor": { "base": 25, "per_attack": 2, "per_defense": 3, "per_hp": 0.5, "per_special": 15 },
+      "accessory": { "base": 50, "per_attack": 3, "per_defense": 3, "per_hp": 0.5, "per_special": 25 }
+    },
+    "quality_multipliers": {
+      "worn": 1.0,
+      "common": 2.0,
+      "fine": 4.5,
+      "rare": 12.0,
+      "epic": 30.0,
+      "legend": 80.0
+    }
+  },
+  "materials": {
+    "mat_slime_gel": { "name": "史莱姆凝胶", "buy_price": null, "sell_price": 5 },
+    "mat_goblin_ear": { "name": "哥布林耳朵", "buy_price": null, "sell_price": 6 },
+    "mat_bat_wing": { "name": "蝙蝠翅膀", "buy_price": null, "sell_price": 4 },
+    "mat_boar_tusk": { "name": "野猪獠牙", "buy_price": null, "sell_price": 7 },
+    "mat_bone_fragment": { "name": "骨片", "buy_price": null, "sell_price": 6 },
+    "mat_poison_sac": { "name": "毒囊", "buy_price": null, "sell_price": 8 },
+    "mat_ogre_blood": { "name": "食人魔血液", "buy_price": null, "sell_price": 10 },
+    "mat_stone_core": { "name": "石核", "buy_price": null, "sell_price": 12 },
+    "mat_ghost_dust": { "name": "灵尘", "buy_price": null, "sell_price": 10 },
+    "mat_wolf_fang": { "name": "狼牙", "buy_price": null, "sell_price": 8 },
+    "mat_shadow_cloth": { "name": "暗影布料", "buy_price": null, "sell_price": 15 },
+    "mat_fire_sac": { "name": "火焰囊", "buy_price": null, "sell_price": 10 },
+    "mat_minotaur_horn": { "name": "牛角", "buy_price": null, "sell_price": 15 },
+    "mat_frost_crystal": { "name": "冰霜结晶", "buy_price": null, "sell_price": 18 },
+    "mat_dark_steel": { "name": "黑钢", "buy_price": null, "sell_price": 20 },
+    "mat_lich_soul": { "name": "灵魂碎片", "buy_price": null, "sell_price": 22 },
+    "mat_demon_heart": { "name": "恶魔心脏", "buy_price": null, "sell_price": 25 },
+    "mat_inferno_core": { "name": "地狱火核心", "buy_price": null, "sell_price": 30 },
+    "mat_dragon_scale": { "name": "龙鳞", "buy_price": null, "sell_price": 35 },
+    "mat_shadow_essence": { "name": "暗影精华", "buy_price": null, "sell_price": 28 },
+    "mat_abyss_pearl": { "name": "深渊珍珠", "buy_price": null, "sell_price": 50 },
+    "mat_chaos_gem": { "name": "混沌宝石", "buy_price": null, "sell_price": 60 },
+    "mat_demon_crown": { "name": "魔王之冠", "buy_price": null, "sell_price": 100 }
+  },
+  "consumables": {
+    "hp_potion_small": { "name": "小型生命药水", "effect": "恢复 30 HP", "buy_price": 30, "sell_price": 15, "unlock_floor": 1, "daily_stock": 3 },
+    "hp_potion_medium": { "name": "中型生命药水", "effect": "恢复 80 HP", "buy_price": 70, "sell_price": 35, "unlock_floor": 3, "daily_stock": 2 },
+    "hp_potion_large": { "name": "大型生命药水", "effect": "恢复 200 HP", "buy_price": 150, "sell_price": 75, "unlock_floor": 5, "daily_stock": 2 },
+    "vitality_tonic": { "name": "活力药剂", "effect": "明日行动次数 +1", "buy_price": 200, "sell_price": 100, "unlock_floor": 4, "daily_stock": 1 },
+    "antidote": { "name": "解毒草", "effect": "解除中毒状态（预留）", "buy_price": 50, "sell_price": 25, "unlock_floor": 2, "daily_stock": 2 }
+  },
+  "services": {
+    "camp_upgrade": { "name": "营地扩建", "effect": "永久提升营地基础恢复至 50% HP", "price": 500, "one_time": true },
+    "premium_rest": { "name": "高级护理服务", "effect": "本次营地恢复额外 +30% HP（即恢复 60%）", "price": 50, "one_time": false, "unlock_floor": 3, "daily_limit": 2 }
+  },
+  "daily_stock_pool": {
+    "description": "商店每日随机刷新的商品池，按玩家历史最高到达层数解锁",
+    "rules": {
+      "1": { "qualities": ["worn", "common"], "items_count": 3, "consumables": ["hp_potion_small"] },
+      "3": { "qualities": ["worn", "common", "fine"], "items_count": 4, "consumables": ["hp_potion_small", "hp_potion_medium"] },
+      "5": { "qualities": ["common", "fine", "rare"], "items_count": 5, "consumables": ["hp_potion_small", "hp_potion_medium", "hp_potion_large", "vitality_tonic"] },
+      "7": { "qualities": ["fine", "rare", "epic"], "items_count": 6, "consumables": ["hp_potion_medium", "hp_potion_large", "vitality_tonic"] },
+      "10": { "qualities": ["rare", "epic", "legend"], "items_count": 6, "consumables": ["hp_potion_large", "vitality_tonic"] }
+    }
+  }
+}

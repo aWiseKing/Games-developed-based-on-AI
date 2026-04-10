@@ -1,0 +1,485 @@
+{
+  "monsters": [
+    {
+      "id": "slime_small",
+      "name": "小史莱姆",
+      "floor": 1,
+      "level": 1,
+      "hp": 20,
+      "attack": 3,
+      "defense": 1,
+      "exp_reward": 5,
+      "gold_reward": 10,
+      "drop_table": [
+        { "item_id": "mat_slime_gel", "probability": 0.40, "quantity": [1, 2] },
+        { "item_id": "eq_worn_dagger", "probability": 0.18 },
+        { "item_id": "eq_common_leather_armor", "probability": 0.05 }
+      ]
+    },
+    {
+      "id": "goblin",
+      "name": "哥布林",
+      "floor": 1,
+      "level": 2,
+      "hp": 30,
+      "attack": 4,
+      "defense": 2,
+      "exp_reward": 8,
+      "gold_reward": 12,
+      "drop_table": [
+        { "item_id": "mat_goblin_ear", "probability": 0.35, "quantity": [1, 1] },
+        { "item_id": "eq_worn_short_sword", "probability": 0.15 },
+        { "item_id": "eq_common_wooden_shield", "probability": 0.05 }
+      ]
+    },
+    {
+      "id": "bat_cave",
+      "name": "洞穴蝙蝠",
+      "floor": 1,
+      "level": 1,
+      "hp": 18,
+      "attack": 5,
+      "defense": 0,
+      "exp_reward": 6,
+      "gold_reward": 8,
+      "drop_table": [
+        { "item_id": "mat_bat_wing", "probability": 0.30, "quantity": [1, 2] },
+        { "item_id": "eq_worn_cloth_armor", "probability": 0.15 }
+      ]
+    },
+    {
+      "id": "slime_large",
+      "name": "大史莱姆",
+      "floor": 2,
+      "level": 3,
+      "hp": 45,
+      "attack": 6,
+      "defense": 3,
+      "exp_reward": 12,
+      "gold_reward": 18,
+      "drop_table": [
+        { "item_id": "mat_slime_gel", "probability": 0.45, "quantity": [1, 3] },
+        { "item_id": "eq_worn_leather_armor", "probability": 0.18 },
+        { "item_id": "eq_common_iron_dagger", "probability": 0.08 }
+      ]
+    },
+    {
+      "id": "boar",
+      "name": "野猪",
+      "floor": 2,
+      "level": 3,
+      "hp": 50,
+      "attack": 7,
+      "defense": 2,
+      "exp_reward": 14,
+      "gold_reward": 20,
+      "drop_table": [
+        { "item_id": "mat_boar_tusk", "probability": 0.35, "quantity": [1, 2] },
+        { "item_id": "eq_worn_wooden_club", "probability": 0.15 },
+        { "item_id": "eq_common_leather_helmet", "probability": 0.06 }
+      ]
+    },
+    {
+      "id": "skeleton",
+      "name": "骷髅兵",
+      "floor": 2,
+      "level": 4,
+      "hp": 40,
+      "attack": 8,
+      "defense": 4,
+      "exp_reward": 15,
+      "gold_reward": 22,
+      "drop_table": [
+        { "item_id": "mat_bone_fragment", "probability": 0.40, "quantity": [1, 2] },
+        { "item_id": "eq_worn_bone_sword", "probability": 0.16 },
+        { "item_id": "eq_common_iron_shield", "probability": 0.08 }
+      ]
+    },
+    {
+      "id": "goblin_archer",
+      "name": "哥布林射手",
+      "floor": 3,
+      "level": 4,
+      "hp": 45,
+      "attack": 10,
+      "defense": 2,
+      "exp_reward": 20,
+      "gold_reward": 28,
+      "drop_table": [
+        { "item_id": "mat_goblin_ear", "probability": 0.35, "quantity": [1, 2] },
+        { "item_id": "eq_common_short_bow", "probability": 0.12 },
+        { "item_id": "eq_fine_leather_armor", "probability": 0.04 }
+      ]
+    },
+    {
+      "id": "spider_poison",
+      "name": "毒蜘蛛",
+      "floor": 3,
+      "level": 5,
+      "hp": 50,
+      "attack": 9,
+      "defense": 3,
+      "exp_reward": 18,
+      "gold_reward": 25,
+      "drop_table": [
+        { "item_id": "mat_poison_sac", "probability": 0.35, "quantity": [1, 1] },
+        { "item_id": "eq_common_poison_dagger", "probability": 0.10 },
+        { "item_id": "eq_fine_spider_silk_cloak", "probability": 0.04 }
+      ]
+    },
+    {
+      "id": "goblin_chief",
+      "name": "哥布林酋长",
+      "floor": 3,
+      "level": 6,
+      "hp": 90,
+      "attack": 12,
+      "defense": 5,
+      "exp_reward": 40,
+      "gold_reward": 55,
+      "drop_table": [
+        { "item_id": "mat_goblin_ear", "probability": 0.50, "quantity": [2, 4] },
+        { "item_id": "eq_fine_goblin_cleaver", "probability": 0.15 },
+        { "item_id": "eq_fine_chief_armor", "probability": 0.08 },
+        { "item_id": "eq_rare_berserker_ring", "probability": 0.02 }
+      ]
+    },
+    {
+      "id": "wolf_shadow",
+      "name": "暗影狼",
+      "floor": 4,
+      "level": 6,
+      "hp": 65,
+      "attack": 13,
+      "defense": 4,
+      "exp_reward": 25,
+      "gold_reward": 35,
+      "drop_table": [
+        { "item_id": "mat_wolf_fang", "probability": 0.35, "quantity": [1, 2] },
+        { "item_id": "eq_common_wolf_claw", "probability": 0.10 },
+        { "item_id": "eq_fine_shadow_cloak", "probability": 0.05 }
+      ]
+    },
+    {
+      "id": "zombie",
+      "name": "僵尸",
+      "floor": 4,
+      "level": 7,
+      "hp": 100,
+      "attack": 11,
+      "defense": 6,
+      "exp_reward": 28,
+      "gold_reward": 38,
+      "drop_table": [
+        { "item_id": "mat_bone_fragment", "probability": 0.40, "quantity": [2, 3] },
+        { "item_id": "eq_fine_plague_mace", "probability": 0.10 },
+        { "item_id": "eq_fine_rotten_plate", "probability": 0.05 }
+      ]
+    },
+    {
+      "id": "ogre",
+      "name": "食人魔",
+      "floor": 4,
+      "level": 8,
+      "hp": 120,
+      "attack": 15,
+      "defense": 7,
+      "exp_reward": 42,
+      "gold_reward": 55,
+      "drop_table": [
+        { "item_id": "mat_ogre_blood", "probability": 0.35, "quantity": [1, 1] },
+        { "item_id": "eq_fine_ogre_club", "probability": 0.12 },
+        { "item_id": "eq_rare_giant_belt", "probability": 0.04 }
+      ]
+    },
+    {
+      "id": "master_thief",
+      "name": "地精盗贼",
+      "floor": 5,
+      "level": 8,
+      "hp": 75,
+      "attack": 16,
+      "defense": 5,
+      "exp_reward": 35,
+      "gold_reward": 48,
+      "drop_table": [
+        { "item_id": "mat_goblin_ear", "probability": 0.30, "quantity": [1, 2] },
+        { "item_id": "eq_fine_thief_dagger", "probability": 0.10 },
+        { "item_id": "eq_rare_dodge_boots", "probability": 0.04 }
+      ]
+    },
+    {
+      "id": "golem_stone",
+      "name": "岩石傀儡",
+      "floor": 5,
+      "level": 9,
+      "hp": 160,
+      "attack": 14,
+      "defense": 12,
+      "exp_reward": 45,
+      "gold_reward": 65,
+      "drop_table": [
+        { "item_id": "mat_stone_core", "probability": 0.40, "quantity": [1, 1] },
+        { "item_id": "eq_fine_stone_gauntlets", "probability": 0.10 },
+        { "item_id": "eq_rare_stone_plate", "probability": 0.05 }
+      ]
+    },
+    {
+      "id": "ghost",
+      "name": "幽灵",
+      "floor": 5,
+      "level": 10,
+      "hp": 60,
+      "attack": 19,
+      "defense": 3,
+      "exp_reward": 38,
+      "gold_reward": 52,
+      "drop_table": [
+        { "item_id": "mat_ghost_dust", "probability": 0.35, "quantity": [1, 2] },
+        { "item_id": "eq_fine_ectoplasm_amulet", "probability": 0.08 },
+        { "item_id": "eq_rare_spirit_ring", "probability": 0.03 }
+      ]
+    },
+    {
+      "id": "minotaur",
+      "name": "牛头怪",
+      "floor": 6,
+      "level": 11,
+      "hp": 150,
+      "attack": 21,
+      "defense": 9,
+      "exp_reward": 55,
+      "gold_reward": 80,
+      "drop_table": [
+        { "item_id": "mat_minotaur_horn", "probability": 0.35, "quantity": [1, 2] },
+        { "item_id": "eq_fine_minotaur_axe", "probability": 0.10 },
+        { "item_id": "eq_rare_bull_helmet", "probability": 0.05 }
+      ]
+    },
+    {
+      "id": "assassin_shadow",
+      "name": "暗影刺客",
+      "floor": 6,
+      "level": 12,
+      "hp": 90,
+      "attack": 24,
+      "defense": 7,
+      "exp_reward": 52,
+      "gold_reward": 75,
+      "drop_table": [
+        { "item_id": "mat_shadow_cloth", "probability": 0.30, "quantity": [1, 1] },
+        { "item_id": "eq_rare_shadow_blade", "probability": 0.08 },
+        { "item_id": "eq_rare_assassin_cape", "probability": 0.04 }
+      ]
+    },
+    {
+      "id": "fire_bat",
+      "name": "火焰蝙蝠",
+      "floor": 6,
+      "level": 10,
+      "hp": 70,
+      "attack": 20,
+      "defense": 4,
+      "exp_reward": 48,
+      "gold_reward": 70,
+      "drop_table": [
+        { "item_id": "mat_fire_sac", "probability": 0.35, "quantity": [1, 2] },
+        { "item_id": "eq_fine_fire_orb", "probability": 0.08 },
+        { "item_id": "eq_rare_flame_amulet", "probability": 0.03 }
+      ]
+    },
+    {
+      "id": "giant_frost",
+      "name": "冰霜巨人",
+      "floor": 7,
+      "level": 14,
+      "hp": 200,
+      "attack": 25,
+      "defense": 13,
+      "exp_reward": 68,
+      "gold_reward": 100,
+      "drop_table": [
+        { "item_id": "mat_frost_crystal", "probability": 0.40, "quantity": [1, 2] },
+        { "item_id": "eq_rare_frost_greatsword", "probability": 0.08 },
+        { "item_id": "eq_rare_ice_plate", "probability": 0.04 }
+      ]
+    },
+    {
+      "id": "knight_dark",
+      "name": "黑暗骑士",
+      "floor": 7,
+      "level": 15,
+      "hp": 170,
+      "attack": 27,
+      "defense": 11,
+      "exp_reward": 65,
+      "gold_reward": 95,
+      "drop_table": [
+        { "item_id": "mat_dark_steel", "probability": 0.35, "quantity": [1, 2] },
+        { "item_id": "eq_rare_dark_longsword", "probability": 0.08 },
+        { "item_id": "eq_epic_cursed_shield", "probability": 0.02 }
+      ]
+    },
+    {
+      "id": "lich",
+      "name": "巫妖",
+      "floor": 7,
+      "level": 16,
+      "hp": 110,
+      "attack": 30,
+      "defense": 8,
+      "exp_reward": 72,
+      "gold_reward": 105,
+      "drop_table": [
+        { "item_id": "mat_lich_soul", "probability": 0.30, "quantity": [1, 1] },
+        { "item_id": "eq_rare_lich_staff", "probability": 0.08 },
+        { "item_id": "eq_epic_soul_ring", "probability": 0.03 }
+      ]
+    },
+    {
+      "id": "demon_abyss",
+      "name": "深渊恶魔",
+      "floor": 8,
+      "level": 17,
+      "hp": 190,
+      "attack": 32,
+      "defense": 12,
+      "exp_reward": 82,
+      "gold_reward": 125,
+      "drop_table": [
+        { "item_id": "mat_demon_heart", "probability": 0.35, "quantity": [1, 1] },
+        { "item_id": "eq_rare_demon_fang", "probability": 0.08 },
+        { "item_id": "eq_epic_abyss_armor", "probability": 0.03 }
+      ]
+    },
+    {
+      "id": "drake",
+      "name": "龙兽",
+      "floor": 8,
+      "level": 18,
+      "hp": 250,
+      "attack": 29,
+      "defense": 15,
+      "exp_reward": 88,
+      "gold_reward": 135,
+      "drop_table": [
+        { "item_id": "mat_dragon_scale", "probability": 0.35, "quantity": [1, 2] },
+        { "item_id": "eq_epic_drake_spear", "probability": 0.06 },
+        { "item_id": "eq_epic_scale_mail", "probability": 0.03 }
+      ]
+    },
+    {
+      "id": "lord_shadow",
+      "name": "暗影领主",
+      "floor": 8,
+      "level": 19,
+      "hp": 160,
+      "attack": 34,
+      "defense": 10,
+      "exp_reward": 85,
+      "gold_reward": 130,
+      "drop_table": [
+        { "item_id": "mat_shadow_essence", "probability": 0.30, "quantity": [1, 1] },
+        { "item_id": "eq_epic_shadow_scythe", "probability": 0.06 },
+        { "item_id": "eq_epic_void_cloak", "probability": 0.03 }
+      ]
+    },
+    {
+      "id": "inferno",
+      "name": "地狱火",
+      "floor": 9,
+      "level": 20,
+      "hp": 230,
+      "attack": 37,
+      "defense": 13,
+      "exp_reward": 105,
+      "gold_reward": 160,
+      "drop_table": [
+        { "item_id": "mat_inferno_core", "probability": 0.35, "quantity": [1, 1] },
+        { "item_id": "eq_epic_inferno_blade", "probability": 0.05 },
+        { "item_id": "eq_epic_flame_crown", "probability": 0.02 }
+      ]
+    },
+    {
+      "id": "dragon_ancient_young",
+      "name": "远古巨龙(幼龙)",
+      "floor": 9,
+      "level": 22,
+      "hp": 320,
+      "attack": 34,
+      "defense": 18,
+      "exp_reward": 115,
+      "gold_reward": 175,
+      "drop_table": [
+        { "item_id": "mat_dragon_scale", "probability": 0.45, "quantity": [2, 4] },
+        { "item_id": "eq_epic_dragon_slayer", "probability": 0.05 },
+        { "item_id": "eq_legend_dragon_heart", "probability": 0.01 }
+      ]
+    },
+    {
+      "id": "death_knight",
+      "name": "死亡骑士",
+      "floor": 9,
+      "level": 21,
+      "hp": 270,
+      "attack": 36,
+      "defense": 14,
+      "exp_reward": 110,
+      "gold_reward": 170,
+      "drop_table": [
+        { "item_id": "mat_dark_steel", "probability": 0.35, "quantity": [2, 3] },
+        { "item_id": "eq_epic_death_blade", "probability": 0.05 },
+        { "item_id": "eq_legend_skull_ring", "probability": 0.01 }
+      ]
+    },
+    {
+      "id": "abyss_lord",
+      "name": "深渊之主",
+      "floor": 10,
+      "level": 25,
+      "hp": 350,
+      "attack": 40,
+      "defense": 16,
+      "exp_reward": 130,
+      "gold_reward": 200,
+      "drop_table": [
+        { "item_id": "mat_abyss_pearl", "probability": 0.35, "quantity": [1, 1] },
+        { "item_id": "eq_epic_abyss_greatsword", "probability": 0.05 },
+        { "item_id": "eq_legend_abyss_crown", "probability": 0.01 }
+      ]
+    },
+    {
+      "id": "dragon_chaos",
+      "name": "混沌巨龙",
+      "floor": 10,
+      "level": 27,
+      "hp": 400,
+      "attack": 43,
+      "defense": 18,
+      "exp_reward": 145,
+      "gold_reward": 220,
+      "drop_table": [
+        { "item_id": "mat_chaos_gem", "probability": 0.30, "quantity": [1, 1] },
+        { "item_id": "eq_legend_chaos_blade", "probability": 0.03 },
+        { "item_id": "eq_legend_dragon_scale_armor", "probability": 0.015 }
+      ]
+    },
+    {
+      "id": "demon_king",
+      "name": "魔王",
+      "floor": 10,
+      "level": 30,
+      "hp": 600,
+      "attack": 48,
+      "defense": 22,
+      "exp_reward": 250,
+      "gold_reward": 400,
+      "drop_table": [
+        { "item_id": "mat_demon_crown", "probability": 0.50, "quantity": [1, 1] },
+        { "item_id": "eq_legend_demon_king_sword", "probability": 0.05 },
+        { "item_id": "eq_legend_apocalypse_armor", "probability": 0.02 },
+        { "item_id": "eq_legend_eternity_ring", "probability": 0.01 }
+      ]
+    }
+  ]
+}

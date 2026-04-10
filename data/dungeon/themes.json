@@ -1,0 +1,293 @@
+{
+  "forest": {
+    "id": "forest",
+    "name": "Forest",
+    "nameZh": "迷雾森林",
+    "description": "充满迷雾的古老森林，栖息着各种生物。小心潜伏在阴影中的危险。",
+    "element": "earth",
+    "visual": {
+      "background": "linear-gradient(to bottom, #1a3a1a, #0d1f0d)",
+      "ambientColor": "#2d5a2d",
+      "particleEffect": "leaves",
+      "fogColor": "rgba(160, 192, 160, 0.3)",
+      "fogDensity": 0.3,
+      "icon": "🌲"
+    },
+    "audio": {
+      "bgm": "audio/bgm/forest_theme.mp3",
+      "ambient": "audio/sfx/forest_ambient.mp3",
+      "battleBgm": "audio/bgm/forest_battle.mp3"
+    },
+    "mechanics": {
+      "monsterTypes": ["slime", "goblin", "wolf", "treant", "spider", "snake"],
+      "environmentalEffects": [
+        {
+          "type": "visibility",
+          "value": 0.7,
+          "description": "视野范围减少30%"
+        }
+      ],
+      "specialEvents": ["herb_gathering", "beast_nest", "fairy_encounter", "ancient_tree", "mushroom_circle"],
+      "boss": "Forest Guardian",
+      "bossDescription": "森林的古老守护者，拥有强大的自然之力"
+    },
+    "unlockCondition": {}
+  },
+  "volcano": {
+    "id": "volcano",
+    "name": "Volcano",
+    "nameZh": "熔岩火山",
+    "description": "炽热的火山地带，到处流淌着岩浆。只有最勇敢的冒险者才能在这里生存。",
+    "element": "fire",
+    "visual": {
+      "background": "linear-gradient(to bottom, #4a1a1a, #2d0d0d)",
+      "ambientColor": "#8b0000",
+      "particleEffect": "embers",
+      "fogColor": "rgba(255, 69, 0, 0.2)",
+      "fogDensity": 0.2,
+      "icon": "🌋"
+    },
+    "audio": {
+      "bgm": "audio/bgm/volcano_theme.mp3",
+      "ambient": "audio/sfx/volcano_ambient.mp3",
+      "battleBgm": "audio/bgm/volcano_battle.mp3"
+    },
+    "mechanics": {
+      "monsterTypes": ["fire_elemental", "lava_golem", "phoenix", "salamander", "magma_beast"],
+      "environmentalEffects": [
+        {
+          "type": "damage_taken",
+          "value": 3,
+          "description": "每回合受到3点火焰伤害"
+        },
+        {
+          "type": "healing_effect",
+          "value": 0.8,
+          "description": "治疗效果降低20%"
+        }
+      ],
+      "specialEvents": ["lava_river", "obsidian_deposit", "fire_shrine", "volcanic_vent", "magma_chamber"],
+      "boss": "Volcanic Dragon",
+      "bossDescription": "沉睡于火山深处的远古巨龙"
+    },
+    "unlockCondition": {
+      "floorReached": 5
+    }
+  },
+  "ice_cave": {
+    "id": "ice_cave",
+    "name": "Ice Cave",
+    "nameZh": "极寒冰窟",
+    "description": "永冻的地下洞穴，寒冷会侵蚀你的意志。小心脚下，冰面很滑。",
+    "element": "ice",
+    "visual": {
+      "background": "linear-gradient(to bottom, #1a2a3a, #0d151f)",
+      "ambientColor": "#4682b4",
+      "particleEffect": "snow",
+      "fogColor": "rgba(200, 220, 255, 0.4)",
+      "fogDensity": 0.4,
+      "icon": "❄️"
+    },
+    "audio": {
+      "bgm": "audio/bgm/ice_theme.mp3",
+      "ambient": "audio/sfx/ice_ambient.mp3",
+      "battleBgm": "audio/bgm/ice_battle.mp3"
+    },
+    "mechanics": {
+      "monsterTypes": ["ice_elemental", "yeti", "frost_wolf", "snowman", "polar_bear"],
+      "environmentalEffects": [
+        {
+          "type": "movement_speed",
+          "value": 0.8,
+          "description": "移动速度降低20%"
+        }
+      ],
+      "specialEvents": ["frozen_lake", "ice_crystal", "blizzard", "warm_spring", "glacier"],
+      "boss": "Ice Queen",
+      "bossDescription": "统治冰窟的冰雪女王"
+    },
+    "unlockCondition": {
+      "floorReached": 10
+    }
+  },
+  "ruins": {
+    "id": "ruins",
+    "name": "Ruins",
+    "nameZh": "远古遗迹",
+    "description": "被遗忘的古代文明遗址，充满了神秘的机关和宝藏。",
+    "element": "earth",
+    "visual": {
+      "background": "linear-gradient(to bottom, #3a3a2a, #1f1f15)",
+      "ambientColor": "#8b7355",
+      "particleEffect": "dust",
+      "fogColor": "rgba(180, 160, 140, 0.3)",
+      "fogDensity": 0.3,
+      "icon": "🏛️"
+    },
+    "audio": {
+      "bgm": "audio/bgm/ruins_theme.mp3",
+      "ambient": "audio/sfx/ruins_ambient.mp3",
+      "battleBgm": "audio/bgm/ruins_battle.mp3"
+    },
+    "mechanics": {
+      "monsterTypes": ["skeleton", "mummy", "golem", "ghost", "sarcophagus"],
+      "environmentalEffects": [
+        {
+          "type": "gold_bonus",
+          "value": 1.2,
+          "description": "金币获取增加20%"
+        }
+      ],
+      "specialEvents": ["ancient_mechansim", "hidden_chamber", "treasure_room", "inscription", "time_portal"],
+      "boss": "Ancient Guardian",
+      "bossDescription": "守护遗迹的古代魔像"
+    },
+    "unlockCondition": {
+      "floorReached": 15
+    }
+  },
+  "tomb": {
+    "id": "tomb",
+    "name": "Tomb",
+    "nameZh": "幽暗墓穴",
+    "description": "死者的安息之地，不死生物在这里游荡。黑暗会吞噬你的理智。",
+    "element": "dark",
+    "visual": {
+      "background": "linear-gradient(to bottom, #1a1a1a, #0d0d0d)",
+      "ambientColor": "#696969",
+      "particleEffect": "darkness",
+      "fogColor": "rgba(50, 50, 50, 0.6)",
+      "fogDensity": 0.6,
+      "icon": "⚰️"
+    },
+    "audio": {
+      "bgm": "audio/bgm/tomb_theme.mp3",
+      "ambient": "audio/sfx/tomb_ambient.mp3",
+      "battleBgm": "audio/bgm/tomb_battle.mp3"
+    },
+    "mechanics": {
+      "monsterTypes": ["zombie", "skeleton", "ghost", "vampire", "lich"],
+      "environmentalEffects": [
+        {
+          "type": "healing_effect",
+          "value": 0.7,
+          "description": "治疗效果降低30%"
+        }
+      ],
+      "specialEvents": ["coffin", "sacrificial_altar", "haunted_mirror", "cursed_treasure", "soul_well"],
+      "boss": "Death Knight",
+      "bossDescription": "死亡骑士，墓穴中最强大的不死生物"
+    },
+    "unlockCondition": {
+      "floorReached": 20
+    }
+  },
+  "sewer": {
+    "id": "sewer",
+    "name": "Sewer",
+    "nameZh": "污秽下水道",
+    "description": "城市的下水道系统，充满了肮脏和疾病。",
+    "element": "water",
+    "visual": {
+      "background": "linear-gradient(to bottom, #2a3a2a, #151f15)",
+      "ambientColor": "#556b2f",
+      "particleEffect": "sludge",
+      "fogColor": "rgba(100, 120, 100, 0.4)",
+      "fogDensity": 0.4,
+      "icon": "🐀"
+    },
+    "audio": {
+      "bgm": "audio/bgm/sewer_theme.mp3",
+      "ambient": "audio/sfx/sewer_ambient.mp3",
+      "battleBgm": "audio/bgm/sewer_battle.mp3"
+    },
+    "mechanics": {
+      "monsterTypes": ["rat", "slime", "crocodile", "plague_rat", "ooze"],
+      "environmentalEffects": [
+        {
+          "type": "damage_taken",
+          "value": 2,
+          "description": "每回合受到2点毒素伤害"
+        }
+      ],
+      "specialEvents": ["toxic_waste", "rat_nest", "flooded_tunnel", "hidden_cache", "toxic_flower"],
+      "boss": "Plague Bringer",
+      "bossDescription": "带来瘟疫的巨型老鼠"
+    },
+    "unlockCondition": {
+      "floorReached": 8
+    }
+  },
+  "castle": {
+    "id": "castle",
+    "name": "Castle",
+    "nameZh": "古老城堡",
+    "description": "废弃的贵族城堡，曾经是权力的象征，现在是怪物的巢穴。",
+    "element": "none",
+    "visual": {
+      "background": "linear-gradient(to bottom, #2a2a3a, #15151f)",
+      "ambientColor": "#483d8b",
+      "particleEffect": "dust",
+      "fogColor": "rgba(180, 180, 200, 0.2)",
+      "fogDensity": 0.2,
+      "icon": "🏰"
+    },
+    "audio": {
+      "bgm": "audio/bgm/castle_theme.mp3",
+      "ambient": "audio/sfx/castle_ambient.mp3",
+      "battleBgm": "audio/bgm/castle_battle.mp3"
+    },
+    "mechanics": {
+      "monsterTypes": ["knight", "mage", "archer", "royal_guard", "jester"],
+      "environmentalEffects": [
+        {
+          "type": "exp_bonus",
+          "value": 1.15,
+          "description": "经验值获取增加15%"
+        }
+      ],
+      "specialEvents": ["throne_room", "treasury", "library", "dungeon", "banquet_hall"],
+      "boss": "Fallen King",
+      "bossDescription": "堕落的国王，城堡的主人"
+    },
+    "unlockCondition": {
+      "floorReached": 25
+    }
+  },
+  "mine": {
+    "id": "mine",
+    "name": "Mine",
+    "nameZh": "废弃矿洞",
+    "description": "被遗弃的矿洞，富含珍贵矿石但也充满危险。",
+    "element": "earth",
+    "visual": {
+      "background": "linear-gradient(to bottom, #3a2a1a, #1f150d)",
+      "ambientColor": "#8b4513",
+      "particleEffect": "dust",
+      "fogColor": "rgba(160, 140, 120, 0.3)",
+      "fogDensity": 0.3,
+      "icon": "⛏️"
+    },
+    "audio": {
+      "bgm": "audio/bgm/mine_theme.mp3",
+      "ambient": "audio/sfx/mine_ambient.mp3",
+      "battleBgm": "audio/bgm/mine_battle.mp3"
+    },
+    "mechanics": {
+      "monsterTypes": ["bat", "spider", "golem", "miner_ghost", "crystal_beast"],
+      "environmentalEffects": [
+        {
+          "type": "gold_bonus",
+          "value": 1.25,
+          "description": "金币获取增加25%"
+        }
+      ],
+      "specialEvents": ["crystal_vein", "abandoned_cart", "cave_in", "gem_deposit", "forge"],
+      "boss": "Crystal Golem",
+      "bossDescription": "由珍贵水晶构成的巨大魔像"
+    },
+    "unlockCondition": {
+      "floorReached": 12
+    }
+  }
+}

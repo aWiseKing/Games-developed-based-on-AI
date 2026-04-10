@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "initial_debt": 10000,
+    "interest_rate": 0.25,
+    "interest_description": "阶段性还款未足额时，仅对该阶段未还部分追加25%利息，利息滚入总债务",
+    "total_days": 100,
+    "stage_days": 20
+  },
+  "stages": [
+    {
+      "stage_number": 1,
+      "deadline_day": 20,
+      "minimum_payment": 1000,
+      "description": "第一次阶段性还款，金额较低，给玩家适应期"
+    },
+    {
+      "stage_number": 2,
+      "deadline_day": 40,
+      "minimum_payment": 2000,
+      "description": "第二次还款，金额翻倍，玩家需要稳定farm第3-4层"
+    },
+    {
+      "stage_number": 3,
+      "deadline_day": 60,
+      "minimum_payment": 2500,
+      "description": "中期还款压力加大，需要冲击第5-6层"
+    },
+    {
+      "stage_number": 4,
+      "deadline_day": 80,
+      "minimum_payment": 3000,
+      "description": "后期高额还款，必须稳定在7层以上"
+    },
+    {
+      "stage_number": 5,
+      "deadline_day": 100,
+      "minimum_payment": null,
+      "description": "最终清算日，必须还清剩余全部债务"
+    }
+  ],
+  "calculation_rules": {
+    "rule_1": "每阶段结算日当天结束时自动触发还款判定",
+    "rule_2": "玩家可以主动提前还款，但阶段判定日仍会检查该阶段最低还款额是否满足",
+    "rule_3": "若实际还款 >= 最低还款额：总债务 -= 实际还款",
+    "rule_4": "若实际还款 < 最低还款额：未还部分 = 最低还款额 - 实际还款；利息 = 未还部分 × 0.25；总债务 = 总债务 - 实际还款 + 利息",
+    "rule_5": "提前还款超出最低还款额的部分直接减少总债务，不产生额外收益或惩罚",
+    "rule_6": "第100天必须还清全部剩余债务，任何未清债务均导致游戏失败"
+  },
+  "examples": [
+    {
+      "case": "足额还款",
+      "stage": 1,
+      "before_debt": 10000,
+      "paid": 1000,
+      "after_debt": 9000,
+      "interest": 0
+    },
+    {
+      "case": "部分还款",
+      "stage": 1,
+      "before_debt": 10000,
+      "paid": 600,
+      "after_debt": 9500,
+      "interest": 100,
+      "detail": "未还400，利息400×0.25=100，总债务=10000-600+100=9500"
+    },
+    {
+      "case": "完全不还",
+      "stage": 1,
+      "before_debt": 10000,
+      "paid": 0,
+      "after_debt": 10250,
+      "interest": 250,
+      "detail": "未还1000，利息1000×0.25=250，总债务=10000-0+250=10250"
+    },
+    {
+      "case": "超额还款",
+      "stage": 1,
+      "before_debt": 10000,
+      "paid": 1500,
+      "after_debt": 8500,
+      "interest": 0,
+      "detail": "多还的500直接抵扣总债务"
+    }
+  ],
+  "difficulty_analysis": {
+    "perfect_repayment_total": 10000,
+    "zero_repayment_final": {
+      "stage_1_debt": 10250,
+      "stage_2_debt": 10750,
+      "stage_3_debt": 11375,
+      "stage_4_debt": 12125,
+      "stage_5_final": 12125
+    },
+    "description": "若完全不还款，最终需还多2125金币（利息21.25%）。若部分拖欠，利息会让后期压力倍增"
+  }
+}

@@ -1,0 +1,35 @@
+appId: com.example.dungeon-debt-story
+productName: 关于负债不得不在地下城打工这件事
+copyright: Copyright © 2026
+directories:
+  output: release/new
+  buildResources: build
+files:
+  - dist/**/*
+  - dist-electron/**/*
+  - data/**/*
+extraResources:
+  - from: ./data/
+    to: data
+asar: true
+compression: normal
+
+# Windows 配置 - 禁用所有签名
+win:
+  target:
+    - target: dir
+      arch: [x64]
+  verifyUpdateCodeSignature: false
+  signAndEditExecutable: false
+  signDlls: false
+  requestedExecutionLevel: asInvoker
+
+forceCodeSigning: false
+
+mac:
+  target: dmg
+  identity: null
+  sign: false
+
+linux:
+  target: AppImage

@@ -1,0 +1,40 @@
+# 最终打包配置 - 完全禁用代码签名
+appId: com.example.dungeon-debt-story
+productName: 关于负债不得不在地下城打工这件事
+copyright: Copyright © 2026
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**/*
+  - dist-electron/**/*
+  - data/**/*
+extraResources:
+  - from: ./data/
+    to: data
+asar: true
+compression: normal
+
+# Windows 配置 - 禁用所有签名
+win:
+  target:
+    - target: dir
+      arch: [x64]
+  signingHashAlgorithms: null
+  verifyUpdateCodeSignature: false
+  signAndEditExecutable: false
+  signDlls: false
+  # 不请求管理员权限
+  requestedExecutionLevel: asInvoker
+
+# 禁用强制签名
+forceCodeSigning: false
+
+# macOS 和 Linux 配置（保留但不使用）
+mac:
+  target: dmg
+  identity: null
+  sign: false
+
+linux:
+  target: AppImage

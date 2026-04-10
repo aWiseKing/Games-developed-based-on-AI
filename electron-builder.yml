@@ -1,0 +1,26 @@
+appId: com.example.dungeon-debt-story
+productName: 关于负债不得不在地下城打工这件事
+directories:
+  output: release
+files:
+  - dist/**/*
+  - dist-electron/**/*
+  - data/**/*
+extraResources:
+  - from: ./data/
+    to: data
+asar: true
+compression: store
+
+win:
+  target:
+    - target: dir
+      arch: [x64]
+  verifyUpdateCodeSignature: false
+  signAndEditExecutable: false
+
+mac:
+  target: dmg
+
+linux:
+  target: AppImage
